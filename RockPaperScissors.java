@@ -11,12 +11,16 @@
 
 class RockPaperScissors{
     public static void main(String[] args) {
-        rps("rock", "paper");
+        System.out.println(rps("scissors", "paper"));
         
     }
     public static String rps(String p1, String p2) {
-        
-
-        return "Player 1 wins";
+        if(p1.equals(p2)){
+            return "Draw!";
+        } else if((p1.equals("paper") && p2.equals("rock")) || (p1.equals("rock") && p2.equals("scissors")) || (p1.equals("scissors") && p2.equals("paper")) ){ // paper, rock// rock, scissors// scissors, paper
+            return "Player 1 wins";
+        } else {
+            return "Player 2 wins";
+        }
     }
 }
